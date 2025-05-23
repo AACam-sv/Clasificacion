@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificador de Cáncer de Mama</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- TensorFlow.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <style>
+        body {
+            background-color: #f1f5f9; /* Fondo pastel claro */
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h1 class="text-2xl font-bold text-center text-[#4b5e8e] mb-6">Clasificador de Cáncer de Mama</h1>
+        <div class="flex flex-col items-center">
+            <input type="file" id="imageUpload" accept="image/*" class="mb-4 p-2 border rounded-lg bg-[#e2e8f0] text-[#4b5e8e]">
+            <img id="preview" class="hidden w-64 h-64 object-cover rounded-lg mb-4" alt="Vista previa de la imagen">
+            <button id="predictButton" class="bg-[#a3bffa] hover:bg-[#7f9cf5] text-white font-semibold py-2 px-4 rounded-lg mb-4" disabled>Clasificar</button>
+            <p id="result" class="text-lg font-medium text-[#4b5e8e]"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
